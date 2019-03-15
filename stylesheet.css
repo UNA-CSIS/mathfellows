@@ -1,0 +1,457 @@
+/*** Abdullah M ***/
+
+/* Applies to all pages */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFFFCC; 
+  background-image: url("una-logo-background.png");
+  background-position: center;
+  background-repeat: no-repeat; 
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 81.5%;
+}
+
+/* Header stuff */  
+.signed_out_header, .customer_header, .admin_header{
+  background-image: linear-gradient(#4d0099, #7402BE);
+  height: 102px;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+
+.logo img{
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+
+.website_name {
+  display: inline-block;
+  padding-top: 30px;
+  margin-left: 30px;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: bookman, georgia, courier, sans-serif;
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+/* End applies to all pages */
+
+.sign_in form {
+  display: inline-block;
+}
+
+.button {
+  width: 80px;
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.home_button {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 35px;
+  margin-left: 50px;
+}
+
+.see_tutor_bttn, .manage_tutors_bttn {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 35px;
+  margin-left: 20px;
+}
+
+.account_and_sign_out_bttns {
+  display: inline-block;
+  float: right;
+  width: 17%;
+  margin-top: 40px;
+}
+
+#account_bttn {
+  display: inline-block;
+  float: right;
+}
+
+#sign_out_bttn{
+  display: inline-block;
+  float: right;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.sign_in {
+  float: right;
+  font-family: georgia, courier;
+  color: white;
+  width: 43%;
+  margin-top: 40px;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  font-size: 20px;
+  
+}
+
+#sif_input {
+  border: 2px solid black;		
+  height: 25px;
+  width: 150px;
+}
+
+.sign_in button{
+	margin-left:20px;
+}
+/* End Header stuff */
+
+
+.main_text {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: dimgrey;
+  font-family: bookman, georgia, courier, sans-serif;
+}
+
+.see_tutor_msg, .tutors_found_msg, .instructions_msg, .acct_msg{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: dimgrey;
+  font-family: bookman, georgia, courier, sans-serif;
+}
+
+.tutor_selection {
+  display: block;
+  width: 70%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  background-image: linear-gradient(#4d0099, #7402BE);
+  border-radius: 30px;
+}
+
+.tutor_selection label{
+  font-size: 27px;
+  margin-top: 10px;
+}
+
+.grades, .subjects {
+  height: 95%;
+  margin: 10px;
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: bookman, georgia, courier, sans-serif;
+  text-align: center;
+}
+
+.grades_box{
+  float: left;
+  margin-left: 10%;
+  margin-top: 30px;
+  width: 30%;
+  height: 80%;
+}
+
+.subjects_box{
+  float: right;
+  margin-right: 10%;
+  margin-top: 30px;
+  width: 30%;
+  height: 80%;
+}
+
+.grades #grade_input, .subjects #subject_input{
+  display: block;
+  margin-top: 35px;
+}
+
+input[type=checkbox], input[type=radio]{
+  transform: scale(1.2);
+  margin-right: 5px;
+}
+
+.search_bttn_box{
+  display: block;
+  width: 9%;
+  height: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.search_bttn{
+  display: block;
+  transform: translateY(450px);
+}
+
+.urls{
+  display: block;
+  margin-top: 150px;
+}
+
+#urls {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.url1 {
+  width: 26%;
+}
+
+.url2 {
+  width: 19%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body a:hover{
+  color: darkorange;
+}
+
+.sign_up {
+  display: block;
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: dimgrey;
+  font-family: bookman, georgia, courier, sans-serif;
+}
+
+.sign_up form{
+  margin-left: 30%;
+  width:40%;
+}
+
+.sign_up div{
+  margin-top: 20px;
+}
+
+.sign_up input{
+  float: right;
+  border: 1px solid grey;		
+  height: 22px;
+  width: 320px; 
+}
+
+#dont_float input{
+  display: inline;
+  float: none;
+  width: 20px;
+  margin-left: 20%;
+}
+
+.sign_up #submit_button {
+  margin-top: 40px;
+  margin-left: 45%;
+}
+
+.tutor_box {
+  display: block;
+  width: 60%;
+  height: 40%;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(#4d0099, #7402BE);
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.tutor_image {
+  display: inline-block;
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  margin-left: 20px;
+  margin-top: 20px;
+  border: 1.3px solid grey;
+  border-radius: 5px;
+}
+
+.tutor_image img{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.tutor_name_box, .tutor_name_box_in_manage {
+  display: inline-block;
+  position: absolute;
+  width: 480px;
+  margin-top: 20px;
+  margin-left: 300px;
+}
+
+.tutor_name_box_in_manage{
+  margin-left: 250px;
+}
+
+.tutor_name_text, .active_inactive, .full_name_text, .username_text, .sign_up_date_text {
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: bookman, georgia, courier, sans-serif;
+}
+
+.full_name_text, .username_text, .sign_up_date_text{
+  display: block;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.full_name_text{
+  padding-top: 10px;
+}
+
+.approve_bttn{
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 22px;
+}
+.disapprove_bttn{
+  display: inline-block;
+  margin-left: 365px;
+}
+
+.active_inactive{
+  display: inline-block;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 750px;
+}
+
+.desc_box{
+  display: inline-block;
+  position: absolute;
+  width: 582px;
+  height: 160px;
+  margin-left: 250px;
+  margin-top: 55px;
+  background-color: white;
+  border-radius: 5px;
+  
+}
+
+.desc_text {
+  display: inline-block;
+  overflow-wrap: break-word;
+  width: 100%;
+  height: 100%;
+  margin: 5px;
+  font-family: bookman, georgia, courier, sans-serif;
+  font-size: 16px;
+}
+
+.submit_bttn_box{
+  position: absolute;
+  width: 85px;
+  height: 30px;
+  margin-left: 392px;
+  margin-top: 225px;
+}
+
+.submit_bttn_box input{
+  
+  width: 140px;
+}
+
+.instructions_msg #msg {
+  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.confirm_tutor {
+  display: block;
+  margin-top: 20px;
+  width: 85px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.selection_box, .new_tutor_box, .admin_menu_box{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 80%;
+  margin-top: 30px;
+  background-image: linear-gradient(#4d0099, #7402BE);
+  border-radius: 30px;
+}
+
+.new_tutor_box, .admin_menu_box{
+  width: 40%;
+  height: 27%;
+}
+
+#acct_url1, #acct_url2{ /*, #view_tutors_url, #manage_tutors_url{ */
+  display: block;
+  position: absolute;
+  margin-top: 20px;
+  font-size: 30px;
+  margin-left: 28%;
+}
+
+#acct_url1 { /*, #view_tutors_url {*/
+  margin-top: 150px;
+}
+
+#acct_url2 { /*, #manage_tutors_url{*/
+  margin-top: 300px;
+}
+
+#view_tutors_url, #manage_tutors_url { 
+  display: block;
+  padding-top: 30px;
+  margin-left: 27%;
+  font-size: 30px;
+}
+
+.admin_menu_box a{
+  color: #43ABC9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
