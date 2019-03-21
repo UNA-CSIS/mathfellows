@@ -21,7 +21,7 @@ body {
 }
 
 /* Header stuff */  
-.signed_out_header, .customer_header, .admin_header{
+.signed_out_header, .customer_header, .admin_header, .tutor_header{
   background-image: linear-gradient(#4d0099, #7402BE);
   height: 102px;
   width: 100%;
