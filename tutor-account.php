@@ -16,6 +16,11 @@
         <div id="acct_url2">
           <a href="#">Update password</a>
         </div>
+
+        <div id="acct_url2">
+          <a href="#">Edit Tutor Description</a>
+        </div>
+
       </div>
       
 		  </div>
