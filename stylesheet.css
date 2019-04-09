@@ -61,14 +61,14 @@ body {
 .home_button {
   display: inline-block;
   vertical-align: top;
-  margin-top: 35px;
+  margin-top: 40px;
   margin-left: 50px;
 }
 
 .see_tutor_bttn, .manage_tutors_bttn {
   display: inline-block;
   vertical-align: top;
-  margin-top: 35px;
+  margin-top: 40px;
   margin-left: 20px;
 }
 
@@ -233,7 +233,7 @@ body a:hover{
   color: darkorange;
 }
 
-.sign_up {
+.sign_up, .change_name, .change_email, .change_password {
   display: block;
   margin-top: 40px;
   font-size: 20px;
@@ -242,16 +242,21 @@ body a:hover{
   font-family: bookman, georgia, courier, sans-serif;
 }
 
-.sign_up form{
+.sign_up form, .change_name form, .change_password form {
   margin-left: 30%;
   width:40%;
 }
 
-.sign_up div{
+.change_email form{
+  margin-left: 25%;
+  width: 47%;
+}
+
+.sign_up div, .change_name div, .change_email div, .change_password div{
   margin-top: 20px;
 }
 
-.sign_up input{
+.sign_up input, .change_name input, .change_email input, .change_password input{
   float: right;
   border: 1px solid grey;		
   height: 22px;
@@ -265,10 +270,11 @@ body a:hover{
   margin-left: 20%;
 }
 
-.sign_up #submit_button {
+.sign_up #submit_button, .change_name #submit_button, .change_email #submit_button, .change_password #submit_button {
   margin-top: 40px;
   margin-left: 45%;
 }
+
 
 .tutor_box {
   display: block;
@@ -280,6 +286,13 @@ body a:hover{
   background-image: linear-gradient(#4d0099, #7402BE);
   border: 1px solid black;
   border-radius: 15px;
+}
+
+.in_tut_acct .tutor_box{
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 32px;
+  width: 865px;
 }
 
 .tutor_image {
@@ -382,7 +395,7 @@ body a:hover{
 }
 
 .instructions_msg #msg {
-  font-size: 22px;
+  font-size: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -407,17 +420,34 @@ body a:hover{
   border-radius: 30px;
 }
 
+.tutor_acct_left_panel {
+  float: left;
+  margin-left: 20px;
+  width: 330px;
+  height: 80%;
+  margin-top: 30px;
+  background-image: linear-gradient(#4d0099, #7402BE);
+  border-radius: 30px;
+}
+
 .new_tutor_box, .admin_menu_box{
   width: 40%;
   height: 27%;
 }
 
-#acct_url1, #acct_url2{ /*, #view_tutors_url, #manage_tutors_url{ */
+#acct_url1, #acct_url2, #tut_acct_url { /*, #view_tutors_url, #manage_tutors_url{ */
   display: block;
   position: absolute;
   margin-top: 20px;
   font-size: 30px;
   margin-left: 28%;
+}
+
+#tut_acct_url{
+  margin-left: 35px;
+  /*margin-top: 10px;*/
+  padding-top: 40px;
+  position: relative;
 }
 
 #acct_url1 { /*, #view_tutors_url {*/
@@ -435,11 +465,24 @@ body a:hover{
   font-size: 30px;
 }
 
-.admin_menu_box a{
+.admin_menu_box a, .selection_box a, .tutor_acct_left_panel a{
   color: #43ABC9;
 }
 
+.upload_image_div{
+  
+  margin-top: 50px;
+  text-align: center;
+}
 
+.upload_image_div input{
+  height: 60px;
+  width: 300px;
+  padding-top: 20px;
+  font-size: 30px;
+  color: dimgrey;
+  font-family: bookman, georgia, courier, sans-serif;
+}
 
 
 

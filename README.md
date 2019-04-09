@@ -1,2 +1,2 @@
-# cs455
-Math Fellow Project
+# CS 455
+Math Fellows Project

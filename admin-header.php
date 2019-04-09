@@ -1,3 +1,6 @@
+<?php  
+  //$ROOT_PATH = '/Applications/XAMPP/xamppfiles/htdocs/math-fellows-project';
+?>
 <html>
 
 <!-- Abdullah M -->

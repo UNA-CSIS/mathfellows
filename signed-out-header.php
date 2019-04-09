@@ -2,12 +2,17 @@
 <!-- Signed out header -->
 
 <!-- Abdullah M -->
-
+	<?php
+		//$ROOT_PATH = '/Applications/XAMPP/xamppfiles/htdocs/math-fellows-project';
+	?>
+	
   <head>
     <meta charset="utf-8">
     <title>Home</title>
     <link rel="stylesheet" href="stylesheet.css">
-  
+    <?php 
+    /*<link rel="stylesheet" href=<?php echo $ROOT_PATH.'/stylesheet.css'?>*/
+    ?>
   
     <div class="signed_out_header">
       <div class="logo">

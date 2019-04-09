@@ -5,10 +5,14 @@
 /*** Abdullah M ***/
 
   session_start();
+  
+  //$ROOT_PATH = '/Applications/XAMPP/xamppfiles/htdocs/math-fellows-project';
+  
   /* If not signed in */
 
   // if ($_SESSION['']
-  include('signed-out-header.php')
+  // include($ROOT_PATH.'/signed-out-header.php');
+  include('signed-out-header.php');
 ?>
   <body>
     <div class="container">
@@ -74,7 +78,6 @@
           </div>   
           
         </form>
-                
       </div>
       
     </div>
