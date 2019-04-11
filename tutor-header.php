@@ -28,6 +28,13 @@
           <button class="button" type="submit">Home</button>
         </form>
       </div>
+
+
+      <div class="manage_tutors_bttn">
+        <form action="index.php" method="post">
+          <button class="button" type="submit">View Tutors</button>
+        </form>
+      </div>
       
       
       <div class="account_and_sign_out_bttns">
