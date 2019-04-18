@@ -20,32 +20,19 @@
         </a>
       </div>
                 
-      <a href="index.php">
-        <div class="website_name">
-          Math Fellows
-        </div>
-      </a>
-                
-      <div class="home_button">
-        <form action="index.php" method="post">
-          <button class="button" type="submit">Home</button>
-        </form>
-      </div>
-      
-      <div class="manage_tutors_bttn">
-        <form action="tutors.php" method="post">
-          <button class="button" type="submit">Tutors</button>
-        </form>
-      </div>  
-      
-      <div class="account_and_sign_out_bttns">
-        <form id="sign_out_bttn" action="#" method="post">
-          <button class="button" type="submit">Sign out</button>
-        </form>
-        
-        <form id="account_bttn" action="admin-account.php" method="post">
-          <button class="button" type="submit">Account</button>
-        </form>
+      <div class="nav_bar">
+        <a href="index.php">
+          <div class="website_name">
+            Math Fellows
+          </div>
+        </a>
+
+        <ul class="nav_menu">          
+          <li><a href="index.php">Home</a></li>
+          <li><a href="tutors.php">Tutors</a></li>
+          <li><a href="admin-account.php">Account</a></li>
+          <li><a href="#">Sign out</a></li>
+        </ul>
       </div>
       
     </div>

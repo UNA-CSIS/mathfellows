@@ -1,6 +1,7 @@
 /*** Abdullah M ***/
 
 /* Applies to all pages */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,6 +29,29 @@ body {
   border-bottom: 2px solid black;
 }
 
+.nav_bar {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.admin_header li, .signed_out_header li, .customer_header li, .tutor_header li {
+  display: inline;
+  text-align: center;
+  font-size: 25px;
+  font-family: bookman, georgia, courier, sans-serif;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.nav_menu a {
+  padding-right: 60px;
+}
+  
+.nav_menu_in_tutor a{
+  padding-left: 25px;
+}
+
 .logo img{
   float: left;
   width: 100px;
@@ -36,19 +60,43 @@ body {
 
 .website_name {
   display: inline-block;
-  padding-top: 30px;
-  margin-left: 30px;
-  font-size: 40px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-size: 45px;
   font-weight: 800;
   font-family: bookman, georgia, courier, sans-serif;
   color: white;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  letter-spacing: 15px;
+  transform: scale(1.2,1);
 }
+
+.sign_in_form {
+  display: block;
+  text-align: right;
+  width: 100%;
+  margin-bottom: 10px;
+}
+  
+#sif_input {
+  margin-top: 2px;
+  display: inline-block;
+  border: 1px solid black;		
+  height: 35px;
+  width: 300px;
+  font-size: 20px;
+  font-family: bookman, georgia, courier, sans-serif;
+}
+  
+.sign_in_button {
+  display: inline;
+  border-radius: 5px;
+  height: 35px;
+  width: 80px;
+}
+
 /* End applies to all pages */
 
-.sign_in form {
-  display: inline-block;
-}
 
 .button {
   width: 80px;
@@ -75,7 +123,7 @@ body {
 .account_and_sign_out_bttns {
   display: inline-block;
   float: right;
-  width: 17%;
+  width: 200px;
   margin-top: 40px;
 }
 
@@ -91,26 +139,6 @@ body {
   margin-right: 10px;
 }
 
-.sign_in {
-  float: right;
-  font-family: georgia, courier;
-  color: white;
-  width: 43%;
-  margin-top: 40px;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-size: 20px;
-  
-}
-
-#sif_input {
-  border: 2px solid black;		
-  height: 25px;
-  width: 150px;
-}
-
-.sign_in button{
-	margin-left:20px;
-}
 /* End Header stuff */
 
 
@@ -227,7 +255,16 @@ input[type=checkbox], input[type=radio]{
 
 a {
   text-decoration: none;
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
+
+.so a {
+  color: #993ddb;
+  text-shadow: none;
+  
+}
+
 
 body a:hover{
   color: darkorange;
@@ -368,7 +405,6 @@ body a:hover{
   margin-top: 55px;
   background-color: white;
   border-radius: 5px;
-  
 }
 
 .desc_text {
@@ -378,7 +414,7 @@ body a:hover{
   height: 100%;
   margin: 5px;
   font-family: bookman, georgia, courier, sans-serif;
-  font-size: 16px;
+  font-size: 25px;
 }
 
 .submit_bttn_box{
@@ -465,12 +501,7 @@ body a:hover{
   font-size: 30px;
 }
 
-.admin_menu_box a, .selection_box a, .tutor_acct_left_panel a{
-  color: #43ABC9;
-}
-
-.upload_image_div{
-  
+.upload_image_div{ 
   margin-top: 50px;
   text-align: center;
 }
@@ -484,17 +515,1014 @@ body a:hover{
   font-family: bookman, georgia, courier, sans-serif;
 }
 
+/* Uncomment below to work on other devices */
+@media only screen and (max-device-width: 600px) {
+/*@media only screen and (max-width: 600px) {*/
+	
+/*	body { background-color: green; }*/
+	
+	 /* Begin header stuff */
+  .signed_out_header {
+    height: 90px;
+  }
+  
+  .customer_header, .admin_header, .tutor_header, .signed_out_header{
+    height: 145px;
+  }
+  
+  .nav_bar {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .admin_header li, .signed_out_header li, .customer_header li, .tutor_header li {
+    display: inline;
+    text-align: center;
+    font-size: 35px;
+    font-family: bookman, georgia, courier, sans-serif;
+    list-style-type: none;
+    overflow: hidden;
+  }
+  
+  .nav_menu a {
+    padding-right: 60px;
+  }
+  
+  .nav_menu_in_tutor a{
+    padding-left: 25px;
+  }
 
+  .logo img{
+    width: 135px;
+    height: 135px;
+  }
 
+  .website_name {
+    padding-top: 20px;
+    margin-bottom: 14px;
+  	 font-size: 50px;
+	   font-weight: 600;
+  }
+  
+  .sign_in_form {
+    display: block;
+    text-align: right;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  
+  #sif_input {
+    margin-top: 2px;
+    display: inline-block;
+    border: 1px solid black;		
+    height: 35px;
+    width: 235px;
+  }
+  
+  .sign_in_button {
+    display: inline;
+    border-radius: 5px;
+    height: 35px;
+    width: 80px;
+  }
+  
+  /* End header stuff */	
+  
+  .instructions_msg {
+    margin-top: 20px;
+    font-size: 45px;
+  }
+  
+  .main_text {
+    margin-top: 20px;
+    font-size: 45px;
+  }
+  
+  /* Begin tutor UI  */
+  
+  .acct_msg{
+    font-size: 45px;
+    margin-top: 10px;
+  }
+  
+  .tutor_acct_left_panel {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 430px;
+    margin-top: 10px;
+  }
+  
+  #tut_acct_url { 
+    margin-top: 15px;
+    padding-top: 15px;
+    font-size: 40px;
+    margin-left: 20px;
+  }
+  
+  .tutor_name_box {
+    width: 430px;
+    margin-top: 10px;
+    margin-left: 180px;
+  }
 
+  .sign_up, .change_name, .change_email, .change_password {
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: 0px;
+    width: 590px;
+  }
+  
+  .sign_up form, .change_password form, .change_email form {
+    margin-left: 340px;
+    width: 320px;
+  }
+  
+  .change_name form {
+    margin-left: 280px;
+    width: 380px;
+  }
+  
+  .change_name form label{
+    margin-left: 60px;
+    width: 360px;
+  }
+  
+  .change_email form input, .sign_up form input, .change_name form input, .change_password form input {
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+  
+  .change_name form #submit_button {
+    margin-top: 0px;
+  }
+  
+  .upload_image_div input{
+    height: 70px;
+    width: 700px;
+    margin-bottom: 10px;
+  }
+  /* End tutor UI  */
+  
+  /* Begin admin UI  */
+  
+  .admin_menu_box{
+    width: 500px;
+    height: 200px;
+    text-align: center;
+  }
+  
+  .new_tutor_box {
+    width: 800px;
+    height: 230px;    
+  }
+  
+  .tutor_box, .in_tut_acct .tutor_box {
+    width: 800px;
+    height: 290px;
+  }
+  
+  .in_tut_acct .tutor_box {
+    margin-top: 15px;
+    margin-left: 15px
+  }
+  
+  .tutor_image {
+    height: 150px;
+    width: 150px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  .desc_box{
+    width: 590px;
+    height: 180px;
+    margin-left: 180px;
+    margin-top: 50px;
+  }
+  
+  .submit_bttn_box{
+    width: 160px;
+    height: 40px;
+    margin-left: 360px;
+    margin-top: 240px;
+  }
+  
+  .submit_bttn_box .button {
+    width: 160px;
+    height: 30px;
+    font-size: 15px;
+    font-family: bookman, georgia, courier, sans-serif;
+  }
+  
+  #view_tutors_url, #manage_tutors_url { 
+    padding-top: 30px;
+    font-size: 45px;
+    margin-left: 0px;
+  }
+  
+  .tutor_name_box_in_manage{
+    margin-top: 10px;
+    margin-left: 180px;
+  }
+  
+  .tutor_name_text{
+    margin-top: 0;  
+  } 
+  
+  .tutor_name_text, .active_inactive, .full_name_text, .username_text, .sign_up_date_text {
+    font-size: 25px;
+  }
+  
+  .active_inactive{
+    margin-top: 10px;
+    margin-left: 670px;
+  } 
+  
+  .full_name_text, .username_text, .sign_up_date_text {
+    margin-top: 20px;
+    font-size: 30px;
+  }
+  
+  .approve_bttn{
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+  }
+  .disapprove_bttn{
+    width: 200px;
+    height: 40px;
+    margin-left: 350px;
+    margin-top: 20px;
+  }  
+  
+  .approve_bttn input, .disapprove_bttn input{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    font-family: bookman, georgia, courier, sans-serif;
+  }
+  
+  /* End admin UI  */
+  
+  /* Begin customer UI  */
+  .see_tutor_msg {
+    width: 580px;
+    margin-top: 10px;
+    font-size: 45px;
+  }
+  .tutors_found_msg {
+    font-size: 40px;
+    margin-top: 15px;
+  }
+  
+  .tutor_selection {
+    width: 780px;
+    height: 500px;
+    margin-top: 10px;
+  }
 
+  .tutor_selection label{
+    font-size: 35px;
+    margin-top: 0px;
+  }  
+  
+  .grades_box{
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 240px;
+    height: 400px;
+  }
 
+  .subjects_box{
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 240px;
+    height: 400px;
+  }
 
+  .grades #grade_input, .subjects #subject_input{
+    display: block;
+    margin-top: 35px;
+  }
 
+  input[type=checkbox], input[type=radio]{
+    transform: scale(1.2);
+    margin-right: 5px;
+  }
 
+  .search_bttn_box{
+    width: 90px;
+    height: 40px;
+  }
 
+  .search_bttn {
+    width: 90px;
+    height: 40px;
+    transform: translateY(400px);
+  }
+  
+  .search_bttn .button, .confirm_tutor .button {
+    width: 90px;
+    height: 40px;
+    font-size: 15px;
+    font-family: bookman, georgia, courier, sans-serif;
+  }
+  
+  .selection_box{
+    width: 580px;
+    height: 400px;
+  }
 
+  #acct_url1 { 
+    margin-left: 130px;
+    margin-top: 50px;
+    font-size: 50px;
+  }
 
+  #acct_url2 {
+    margin-left: 130px;
+    margin-top: 230px;
+    font-size: 50px;
+  }
+  /* End customer UI  */
+} 
 
+/* Uncomment below to work on other devices */
+ @media only screen and (min-device-width: 600px) and (max-device-width: 767px) {
+/*@media only screen and (min-width: 600px) and (max-width: 767px) {*/
 
+  body {
+    
+    background-color: red;
+  }
+    .signed_out_header {
+    height: 90px;
+  }
+  
+  .customer_header, .admin_header, .tutor_header, .signed_out_header{
+    height: 145px;
+  }
+  
+  .nav_bar {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .admin_header li, .signed_out_header li, .customer_header li, .tutor_header li {
+    display: inline;
+    text-align: center;
+    font-size: 35px;
+    font-family: bookman, georgia, courier, sans-serif;
+    list-style-type: none;
+    overflow: hidden;
+  }
+  
+  .nav_menu a {
+    padding-right: 60px;
+  }
+  
+  .nav_menu_in_tutor a{
+    padding-left: 25px;
+  }
 
+  .logo img{
+    width: 145px;
+    height: 145px;
+  }
+
+  .website_name {
+    padding-top: 20px;
+    margin-bottom: 14px;
+  	 font-size: 50px;
+	   font-weight: 600;
+  }
+  
+  .sign_in_form {
+    display: block;
+    text-align: right;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  
+  #sif_input {
+    margin-top: 2px;
+    display: inline-block;
+    border: 1px solid black;		
+    height: 35px;
+    width: 235px;
+  }
+  
+  .sign_in_button {
+    display: inline;
+    border-radius: 5px;
+    height: 35px;
+    width: 80px;
+  }
+
+  .main_text {
+    margin-top: 20px;
+    font-size: 30px;
+  }
+  
+  .instructions_msg {
+    margin-top: 20px;
+    font-size: 25px;
+  }
+  
+  .sign_in {
+    color: dimgrey;
+    font-weight: bold;
+    width: 220px;
+    margin-top: 120px;
+    text-shadow: none;
+    font-size: 20px;
+  }
+  
+  /* End header stuff */
+  
+  /* Begin signed out UI */
+  .urls{
+    margin-top: 110px;
+  }
+
+  #urls {
+    margin-top: 60px;
+   }
+   
+  /* End signed out UI */
+  
+  
+  /* Begin tutor UI  */
+  
+  .acct_msg{
+    margin-top: 10px;
+  }
+  
+  .tutor_acct_left_panel {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 280px;
+    margin-top: 10px;
+  }
+  
+  #tut_acct_url { 
+    margin-top: 15px;
+    padding-top: 15px;
+    font-size: 22px;
+    margin-left: 20px;
+  }
+  
+  .tutor_name_box {
+    width: 430px;
+    margin-top: 10px;
+    margin-left: 120px;
+  }
+
+  .sign_up, .change_name, .change_email, .change_password {
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: 0px;
+    width: 590px;
+  }
+  
+  .sign_up form, .change_password form, .change_email form {
+    margin-left: 200px;
+    width: 320px;
+  }
+  
+  .change_name form {
+    margin-left: 110px;
+    width: 380px;
+  }
+  
+  .change_name form label{
+    margin-left: 60px;
+    width: 360px;
+  }
+  
+  .change_email form input, .sign_up form input, .change_name form input, .change_password form input {
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+  
+  .change_name form #submit_button {
+    margin-top: 0px;
+  }
+  
+  .upload_image_div input{
+    height: 70px;
+    width: 700px;
+    margin-bottom: 10px;
+  }
+  /* End tutor UI  */
+  
+  /* Begin admin UI  */
+  
+  .admin_menu_box{
+    width: 500px;
+    height: 200px;
+    text-align: center;
+  }
+  
+  .new_tutor_box {
+    width: 500px;
+    height: 180px;    
+  }
+  
+  .tutor_box, .in_tut_acct .tutor_box {
+    width: 570px;
+    height: 220px;
+  }
+  
+  .in_tut_acct .tutor_box {
+    margin-top: 15px;
+    margin-left: 15px
+  }
+  
+  .tutor_image {
+    height: 100px;
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  .desc_box{
+    width: 440px;
+    height: 140px;
+    margin-left: 120px;
+    margin-top: 40px;
+  }
+  
+  .submit_bttn_box{
+    width: 160px;
+    height: 40px;
+    margin-left: 215px;
+    margin-top: 185px;
+  }
+  
+  .submit_bttn_box .button {
+    width: 160px;
+    height: 30px;
+    font-size: 15px;
+    font-family: bookman, georgia, courier, sans-serif;
+  }
+  
+  #view_tutors_url, #manage_tutors_url { 
+    padding-top: 30px;
+    font-size: 35px;
+    margin-left: 0px;
+  }
+  
+  .tutor_name_box_in_manage{
+    margin-top: 10px;
+    margin-left: 120px;
+  }
+  
+  .tutor_name_text{
+    margin-top: 0;  
+  } 
+  
+  .active_inactive{
+    margin-top: 10px;
+    margin-left: 470px;
+  } 
+  
+  .full_name_text, .username_text, .sign_up_date_text {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .approve_bttn{
+    width: 200px;
+    height: 40px;
+    margin-top: 15px;
+  }
+  .disapprove_bttn{
+    width: 200px;
+    height: 40px;
+    margin-left: 57px;
+    margin-top: 15px;
+  }  
+  
+  .approve_bttn input, .disapprove_bttn input{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    font-family: bookman, georgia, courier, sans-serif;
+  }
+  
+  /* End admin UI  */
+  
+  /* Begin customer UI  */
+  .see_tutor_msg {
+    width: 580px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .tutors_found_msg {
+    margin-top: 15px;
+  }
+  
+  .tutor_selection {
+    width: 580px;
+    height: 460px;
+    margin-top: 10px;
+  }
+
+  .tutor_selection label{
+    font-size: 27px;
+    margin-top: 0px;
+  }  
+  
+  .grades_box{
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 220px;
+    height: 400px;
+  }
+
+  .subjects_box{
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 220px;
+    height: 400px;
+  }
+
+  .grades #grade_input, .subjects #subject_input{
+    display: block;
+    margin-top: 35px;
+  }
+
+  input[type=checkbox], input[type=radio]{
+    transform: scale(1.2);
+    margin-right: 5px;
+  }
+
+  .search_bttn_box{
+    width: 90px;
+    height: 40px;
+  }
+
+  .search_bttn {
+    width: 90px;
+    height: 40px;
+    transform: translateY(400px);
+  }
+  
+  .search_bttn .button, .confirm_tutor .button {
+    width: 90px;
+    height: 40px;
+    font-size: 15px;
+    font-family: bookman, georgia, courier, sans-serif;
+  }
+  
+  .selection_box{
+    width: 580px;
+    height: 200px;
+  }
+
+  #acct_url1 { 
+    margin-top: 30px;
+  }
+
+  #acct_url2 {
+    margin-top: 110px;
+  }
+  /* End customer UI  */
+
+} 
+
+/* Uncomment below to work on other devices */
+ @media only screen and (min-device-width: 768px) and (max-device-width: 992px) { 
+/*@media only screen and (min-width: 768px) and (max-width: 992px) {*/
+
+  body { background-color: purple; }
+  
+  /* Begin header stuff */
+  .signed_out_header {
+    height: 90px;
+  }
+  
+  .customer_header, .admin_header, .tutor_header, .signed_out_header{
+    height: 145px;
+  }
+  
+  .nav_bar {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .admin_header li, .signed_out_header li, .customer_header li, .tutor_header li {
+    display: inline;
+    text-align: center;
+    font-size: 35px;
+    font-family: bookman, georgia, courier, sans-serif;
+    list-style-type: none;
+    overflow: hidden;
+  }
+  
+  .nav_menu a {
+    padding-right: 60px;
+  }
+  
+  .nav_menu_in_tutor a{
+    padding-left: 25px;
+  }
+
+  .logo img{
+    width: 140px;
+    height: 140px;
+  }
+
+  .website_name {
+    padding-top: 20px;
+    margin-bottom: 14px;
+  	 font-size: 50px;
+	   font-weight: 600;
+  }
+  
+  .sign_in_form {
+    display: block;
+    text-align: right;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  
+  #sif_input {
+    margin-top: 2px;
+    display: inline-block;
+    border: 1px solid black;		
+    height: 35px;
+    width: 235px;
+  }
+  
+  .sign_in_button {
+    display: inline;
+    border-radius: 5px;
+    height: 35px;
+    width: 80px;
+  }
+
+  .website_name {
+    padding-top: 20px;
+    margin-left: 0px;
+    font-size: 35px;
+  }
+  
+  .main_text {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 40px;
+  }
+  
+  .instructions_msg {
+    font-size: 25px;
+  }
+  /* End header stuff */
+  
+  /* Begin signed out UI */
+  .urls{
+    margin-top: 110px;
+  }
+
+  #urls {
+    margin-top: 60px;
+  }
+  /* End signed out UI */
+  
+  /* Begin tutor UI  */
+  
+  
+  .tutor_acct_left_panel {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 290px;
+    height: 320px;
+    margin-top: 20px;
+  }
+  
+  #tut_acct_url { 
+    margin-top: 15px;
+    padding-top: 15px;
+    font-size: 25px;
+    margin-left: 20px;
+  }
+  
+  .in_tut_acct .tutor_box{
+    margin-left: 90px;
+    margin-top: 20px;
+    width: 640px;
+    height: 240px;
+  }
+  
+  #tut_acct_url { 
+    margin-top: 10px;
+    font-size: 30px;
+    margin-left: 10px;
+  }
+  
+  .tutor_image {
+    height: 150px;
+    width: 150px;
+    margin-left: 10px;
+    margin-top: 35px;
+  }
+  
+  .tutor_name_box {
+    width: 460px;
+    margin-top: 15px;
+    margin-left: 190px;
+  }
+  
+  .desc_box{
+    width: 455px;
+    height: 140px;
+    margin-left: 169px;
+    margin-top: 45px;
+  }
+  
+  .submit_bttn_box{
+    width: 85px;
+    height: 40px;
+    margin-left: 280px;
+    margin-top: 192px;
+  }
+
+  .sign_up, .change_name, .change_email, .change_password {
+    margin-top: 40px;
+    font-size: 30px;
+    margin-left: 0px;
+    width: 990px;
+  }
+  
+  .sign_up form, .change_name form, .change_password form, .change_email form {
+    margin-left: 150px;
+    width: 590px;
+  }
+  
+  .change_name form #submit_button {
+    margin-top: 0px;
+  }
+  
+  .upload_image_div input{
+    height: 70px;
+    width: 700px;
+    margin-bottom: 10px;
+  }
+  /* End tutor UI  */
+  
+  /* Begin admin UI  */
+  
+  .admin_menu_box{
+    width: 550px;
+    height: 200px;
+    text-align: center;
+  }
+  
+  .new_tutor_box, .tutor_box {
+    width: 700px;
+    height: 230px;    
+  }
+  
+  #view_tutors_url, #manage_tutors_url { 
+    padding-top: 30px;
+    font-size: 40px;
+    margin-left: 0px;
+  }
+  
+  
+  .tutor_name_box_in_manage{
+    margin-top: 10px;
+    margin-left: 170px;
+  }
+  
+  .tutor_name_text{
+    margin-top: 0;  
+  } 
+  
+  .active_inactive{
+    margin-top: 10px;
+    margin-left: 590px;
+  } 
+  
+  .full_name_text, .username_text, .sign_up_date_text {
+    margin-top: 25px;
+    font-size: 25px;
+  }
+  
+  .approve_bttn{
+    width: 70px;
+    height: 40px;
+    margin-top: 25px;
+  }
+  .disapprove_bttn{
+    width: 70px;
+    height: 40px;
+    margin-left: 287px;
+  }  
+  
+  .approve_bttn input, .disapprove_bttn input{
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    font-family: bookman, georgia, courier, sans-serif;
+  }
+  
+  /* End admin UI  */
+  
+  /* Begin customer UI  */
+
+  .see_tutor_msg {
+    width: 700px;
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  
+  .tutor_selection {
+    width: 635px;
+    height: 460px;
+    margin-top: 10px;
+  }
+
+  .tutor_selection label{
+    font-size: 27px;
+    margin-top: 0px;
+  }  
+/*
+  .grades, .subjects {
+    height: 95%;
+    margin: 10px;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: bookman, georgia, courier, sans-serif;
+    text-align: center;
+  }
+*/
+
+  .grades_box{
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 220px;
+    height: 400px;
+  }
+
+  .subjects_box{
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 220px;
+    height: 400px;
+  }
+
+  .grades #grade_input, .subjects #subject_input{
+    display: block;
+    margin-top: 35px;
+  }
+
+  input[type=checkbox], input[type=radio]{
+    transform: scale(1.2);
+    margin-right: 5px;
+  }
+
+  .search_bttn_box{
+    width: 90px;
+    height: 40px;
+  }
+
+  .search_bttn {
+    width: 90px;
+    height: 40px;
+    transform: translateY(400px);
+  }
+  
+  .search_bttn .button, .confirm_tutor .button {
+    width: 90px;
+    height: 40px;
+    font-size: 15px;
+    font-family: bookman, georgia, courier, sans-serif;
+  }
+  
+  .selection_box{
+    width: 635px;
+    height: 200px;
+  }
+
+  #acct_url1 { 
+    margin-top: 30px;
+  }
+
+  #acct_url2 {
+    margin-top: 110px;
+  }
+  
+  /* End customer UI  */
+} 

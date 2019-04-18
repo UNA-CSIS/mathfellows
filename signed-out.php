@@ -9,7 +9,7 @@
         Welcome to Math Fellows..
       </div>
       
-      <div class="urls">
+      <div class="urls so">
         <a id="urls" class="url1" href="sign-up.php">New user? Sign up here</a>
         <a id="urls" class="url2" href="#">Forgot password</a>
       </div>
