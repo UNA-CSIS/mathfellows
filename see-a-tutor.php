@@ -10,10 +10,10 @@
       
       <div class="see_tutor_msg">
         <div class="msg1">
-          Note: all tutors we have teach middle, and high school only.
+          Note: all tutors we have teach middle and high school only.
         </div>
         <div class="msg2">
-          Please, provide us with more information about the tutor you're looking for:
+          Please provide us with more information about the tutor you're looking for:
         </div>
       </div>
       

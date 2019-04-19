@@ -19,21 +19,21 @@
       <div class="change_password">
         <form action="#" method="post">
           <div> 
-            <label for="un">Username:</label>
+            <label for="username">Username:</label>
             <input type="text" name="username" required>
           </div> 
           <div> 
-            <label for="old_password">Old password:</label>
+            <label for="password">Old password:</label>
             <input type="password" name="password" required>
           </div>
 
           <div> 
-            <label for="new_pwd_1">New password:</label>
+            <label for="newpassword">New password:</label>
             <input type="password" name="newpassword" required>
           </div>
           
           <div> 
-            <label for="new_pwd_2">Repeat new password:</label>
+            <label for="confirm_new">Repeat new password:</label>
             <input type="password" name="confirm_new" required>
           </div>                                 
           <div id="submit_button">
@@ -63,7 +63,7 @@
 
   $result = $conn->query($sql);
 
-  if($result->num_rows > 0) {   //If rows with this name is not found
+  if($result->num_rows == 0) {   //If rows with this name is not found
       $_SESSION['error'] = 'username is not in system';
       header("location:update-password.php");             
   }
@@ -77,7 +77,7 @@
 
   if ($conn->query($sql) === TRUE) {
       echo "Record updated successfully";
-
+  }    
   $conn->close();    
 
 ?>

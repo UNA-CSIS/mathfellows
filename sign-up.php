@@ -1,10 +1,11 @@
 <?php
 
-/* Sign up page */
-
-/*** Abdullah M ***/
-
   session_start();
+
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "test_tutors";
   
   //$ROOT_PATH = '/Applications/XAMPP/xamppfiles/htdocs/math-fellows-project';
   
@@ -25,18 +26,18 @@
         
         <form action="index.php" method="post">
           <div> 
-            <label for="fn">First name:</label>
-            <input type="text" name="fn" required>
+            <label for="first">First name:</label>
+            <input type="text" name="first" required>
           </div>
                         
           <div> 
-            <label for="ln">Last name:</label>
-            <input type="text" name="ln" required>
+            <label for="last">Last name:</label>
+            <input type="text" name="last" required>
           </div>
           
           <div> 
-            <label for="pn">Phone number:</label> 
-            <input type="number" name="pn" required>
+            <label for="phone">Phone number:</label> 
+            <input type="number" name="phone" required>
           </div>
           
           <div> 
@@ -45,25 +46,25 @@
           </div>
           
           <div> 
-            <label for="un">Username:</label>
-            <input type="text" name="un" required>
+            <label for="username">Username:</label>
+            <input type="text" name="username" required>
           </div>
           
           <div> 
-            <label for="pwd1">Password:</label>
-            <input type="password" name="pwd1" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" required>
           </div>
           
           <div> 
-            <label for="pwd2">Repeat password:</label>
-            <input type="password" name="pwd2" required>
+            <label for="pwassword2">Repeat password:</label>
+            <input type="password" name="password2" required>
           </div>
           
          <div> 
             <label for="student_or_tutor">I'm a:</label>
             <span id="dont_float">
-              <input type="radio" name="acct_type" value="Customer" checked> Customer
-              <input type="radio" name="acct_type" value="Tutor"> Tutor
+              <input type="radio" name="acct_type1" value="Customer" checked> Customer
+              <input type="radio" name="acct_type2" value="Tutor"> Tutor
             </span>
           </div>
           
@@ -82,4 +83,55 @@
       
     </div>
   </body>
-</html>
+</html
+
+
+<?php 
+
+  $first = $_POST['first'];
+  $last = $_POST['last'];
+  $phone = $_POST['phone'];
+  $email = $_POST['email'];
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $password2 = $_POST['password2'];
+  $date_created = NOW();
+
+  $conn = new mysqli($servername, $root, $password, $dbname);
+
+  if ($conn->connect_error) {
+      die("Connection failed" . $conn->connect_error);
+  }
+
+  if (isset($_POST['agree']) && $password == $password2)
+  {
+    if (isset($_POST['acct_type1']))
+    {
+       $sql = "INSERT INTO customer (first, last, phone, email, username, password, date_created) VALUES ('$first', '$last', '$phone', '$email', '$username', '$password', '$date_created')";
+    }
+    else
+    {
+       $sql = "INSERT INTO tutor (first, last, phone, email, username, password, approved, active, date_created) VALUES ('$first', '$last', '$phone', '$email', '$username', '$password', '0', '0', '$date_created')";      
+    }
+  }
+  else {
+    echo "Sorry, there was an error in the information provided. Please make sure you have agreed to the terms of use and your passwords match.";
+      header("location:sign-up.php");
+  }
+
+
+  if ($conn->query($sql) === TRUE) {
+      echo "Record updated successfully";
+  }    
+  $conn->close(); 
+
+?>
+
+
+
+
+
+
+
+
+
