@@ -1,7 +1,7 @@
 <?php
+
   include('customer-header.php');
 ?>
-
   <body>
     <div class="container">
       
@@ -11,10 +11,10 @@
       
       <div class="selection_box">
         <div id="acct_url1">
-          <a href="update-email.php">Update email</a>
+          <a href="#">Update email</a>
         </div>
         <div id="acct_url2">
-          <a href="update-password.php">Update password</a>
+          <a href="#">Update password</a>
         </div>
       </div>
       

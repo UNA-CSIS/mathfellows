@@ -83,7 +83,7 @@
         Sorry, no tutors found
       </div>
       
-      <div id="urls" class="urls">
+      <div id="urls" class="urls so">
         <a href="see-a-tutor.php">Try your search again</a>
       </div>
         

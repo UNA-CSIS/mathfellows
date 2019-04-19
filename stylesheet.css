@@ -106,12 +106,11 @@ body {
   cursor: pointer;
 }
 
-
 .home_button {
   display: inline-block;
   vertical-align: top;
   margin-top: 40px;
-  margin-left: 100px;
+  margin-left: 50px;
 }
 
 .see_tutor_bttn, .manage_tutors_bttn {
