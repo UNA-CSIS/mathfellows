@@ -1,45 +1,39 @@
-<!-- Abdullah M -->
-
-<!-- See a tutor -->
-
 <?php
-  include('customer-header.php');
+
+  /*** Abdullah Alharbi ***/
+
+  include('tutor-header.php');
 ?>
   <body>
     <div class="container">
-      
-      <div class="see_tutor_msg">
-        <div class="msg1">
-          Note: all tutors we have teach middle, and high school only.
-        </div>
-        <div class="msg2">
-          Please, provide us with more information about the tutor you're looking for:
-        </div>
+  
+      <div class="main_text">
+        Select the classes and grades you teach:
       </div>
       
       <div class="tutor_selection">
-        <form action="search-result.php" method="post">
+        <form action="#" method="post">
     
           <div class="grades_box">      
             <div class="grades">
               <label>Grade:</label>
               <span id="grade_input">
-                <input type="radio" name="grade" value="seven" checked>7th grade
+                <input type="checkbox" name="grade" value="seven">7th grade
               </span>
               <span id="grade_input">
-                <input type="radio" name="grade" value="eight">8th grade
+                <input type="checkbox" name="grade" value="eight">8th grade
               </span>
               <span id="grade_input">
-                <input type="radio" name="grade" value="nine">9th grade
+                <input type="checkbox" name="grade" value="nine">9th grade
               </span>
               <span id="grade_input">
-                <input type="radio" name="grade" value="ten">10th grade
+                <input type="checkbox" name="grade" value="ten">10th grade
               </span>
               <span id="grade_input">
-                <input type="radio" name="grade" value="eleven">11th grade
+                <input type="checkbox" name="grade" value="eleven">11th grade
               </span>
               <span id="grade_input">
-                <input type="radio" name="grade" value="twelve">12th grade
+                <input type="checkbox" name="grade" value="twelve">12th grade
               </span>
             </div>
           </div>

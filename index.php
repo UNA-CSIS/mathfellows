@@ -6,8 +6,18 @@
   
   //$ROOT_PATH = '/Applications/XAMPP/xamppfiles/htdocs/math-fellows-project';
   
-//  $_SESSION['un'] = 'e';
-//  unset($_SESSION['un'])
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mathFellows";
+
+$conn = new mysqli($servername, $username, $password);
+
+if ($conn->connect_error) {
+    die("Connection to database failed!");
+} 
+
+
 
 //if(!isset($_SESSION['un'])){
   /* If not signed in */
@@ -18,14 +28,14 @@
 //  include('root-admin-header.php');
 //  include('signed-in-admin.php');
 
-  include('admin-header.php');
-  include('signed-in-admin.php');
+//  include('admin-header.php');
+//  include('signed-in-admin.php');
 
 //   include('customer-header.php');
 //   include('signed-in-customer.php');
 
-//   include('tutor-header.php');
-//   include('signed-in-tutor.php');
+   include('tutor-header.php');
+   include('signed-in-tutor.php');
 
 
 // include($ROOT_PATH.'/signed-out-header.php');
@@ -42,6 +52,8 @@
 
 //} else{
 //}
+
+$conn->close();
 
 ?>
 

@@ -15,13 +15,16 @@
       
       <div class="tutor_acct_left_panel">
         <div id="tut_acct_url">
-          <a href="update-email.php">Update email</a>
+          <a href="tutor-edit-grades-subjects.php">Grades & subjects</a>
         </div>
         <div id="tut_acct_url">
-          <a href="update-password.php">Update password</a>
+          <a href="tutor-update-email.php">Update email</a>
         </div>
         <div id="tut_acct_url">
-          <a href="update-name.php">Update name</a>
+          <a href="tutor-update-password.php">Update password</a>
+        </div>
+        <div id="tut_acct_url">
+          <a href="tutor-update-name.php">Update name</a>
         </div>
         <div id="tut_acct_url">
           <a href="update-profile-image.php">Update profile image</a>
@@ -29,8 +32,8 @@
         <div id="tut_acct_url">
           <a href="#">Remove profile image</a>
         </div>
-        
       </div>
+      
       <div class="in_tut_acct">
         <div class="tutor_box">
           <div class="tutor_image">

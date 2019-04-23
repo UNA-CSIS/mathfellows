@@ -31,7 +31,7 @@
       </div>
     </div>
     
-    <form class="sign_in_form" action="index.php" method="post">
+    <form class="sign_in_form" action="verify-login.php" method="post">
       <input id="sif_input" type="text" name="username" placeholder="username">
         
       <input id="sif_input" type="password" name="password" placeholder="password">
