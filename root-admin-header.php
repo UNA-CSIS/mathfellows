@@ -32,7 +32,7 @@
           <li><a href="tutors.php">Tutors</a></li>
           <li><a href="admins.php">Admins</a></li>
           <li><a href="admin-account.php">Account</a></li>
-          <li><a href="#">Sign out</a></li>
+          <li><a href="do-sign-out.php">Sign out</a></li>
         </ul>
       </div>
       

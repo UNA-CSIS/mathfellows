@@ -27,7 +27,7 @@
         <ul class="nav_menu nav_menu_in_tutor">          
           <li><a href="index.php">Home</a></li>
           <li><a href="tutor-account.php">Account</a></li>
-          <li><a href="#">Sign out</a></li>
+          <li><a href="do-sign-out.php">Sign out</a></li>
         </ul>
       </div>
       

@@ -1,8 +1,8 @@
 <?php
 
-	/*** Abdullah M ***/
-
-  include('admin-header.php');
+    /*** Abdullah M ***/
+    session_start();	
+    include('admin-header.php');
 ?>
   <body>
     <div class="container">

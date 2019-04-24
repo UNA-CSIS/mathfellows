@@ -1,68 +1,136 @@
 <?php
-	/*** Abdullah M ***/
-  
+    /*** Abdullah M ***/
+    session_start();
 
+    //$ROOT_PATH = '/Applications/XAMPP/xamppfiles/htdocs/math-fellows-project';
+  
 // Make sure credentials are set before you proceed
 
-  session_start();
+    if ($_POST['username'] == '' || $_POST['password'] == ''){
+        $_SESSION['user_type'] = 0;
+        $_SESSION['error'] = 'Error: username and/or password cannot be empty';
+        header("location:index.php");
+        exit();
+    }
   
-  //$ROOT_PATH = '/Applications/XAMPP/xamppfiles/htdocs/math-fellows-project';
-  
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "test_tutors";
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "MathFellows";
 
-  $conn = new mysqli($servername, $username, $password);
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-  if ($conn->connect_error) {
-      die("Connection to database failed!");
-  } 
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-  $un = $_POST['username'];
-  $pwd = $_POST['password'];
-
+    $un = $_POST['username'];
+    $pwd = $_POST['password'];
+    
+    $un = filter_var($un, FILTER_SANITIZE_STRING);
+    $pwd = filter_var($pwd, FILTER_SANITIZE_STRING); 
+    $un = trim($un);
+    $pwd = trim($pwd);
+    
 //------------------------------------------------------ 
 // Checking if they're a customer
-  $sql = "SELECT * FROM customer WHERE username='$un' AND password='$pwd'";
-
-  $result = $conn->query($sql);
-
-  if ($result->num_rows > 0) {  
-    // log them in as a customer and redirect to index and exit
-  } 
+  
+    $sql = "SELECT * FROM customers WHERE username='$un'";
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {  
+        // log them in as a customer and redirect to index and exit 
+    
+        $row = $result->fetch_assoc();
+      
+        if (password_verify($pwd, $row['password'])){
+            // log them in as a customer and redirect to index and exit    
+            
+            $_SESSION['user_type'] = 4;
+            header("location:index.php");
+            exit();
+        }
+        else {
+            $_SESSION['user_type'] = 0;
+            header("location:index.php");
+            exit(); 
+        }
+    } 
 
 
 //------------------------------------------------------ 
 // Checking if they're a tutor
-  $sql = "SELECT * FROM tutor WHERE username='$un' AND password='$pwd'";
 
-  $result = $conn->query($sql);
+    $sql = "SELECT * FROM tutors WHERE username='$un'";
 
-  if ($result->num_rows > 0) {  
-    // log them in as a tutor and redirect to index and exit
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {  
+    // log them in as a tutor and redirect to index and exit 
+        
+        $row = $result->fetch_assoc();
+      
+        if (password_verify($pwd, $row['password'])){
+            // log them in as a customer and redirect to index and exit        
+            $_SESSION['user_type'] = 3;
+            header("location:index.php");
+            exit();
+        }
+        else {
+            $_SESSION['user_type'] = 0;
+            header("location:index.php");
+            exit(); 
+        }
   } 
 
 
 //------------------------------------------------------ 
 // Checking if they're an admin
-  $sql = "SELECT * FROM admin WHERE username='$un' AND password='$pwd'";
+  
+    $sql = "SELECT * FROM admins WHERE username='$un'";
 
-  $result = $conn->query($sql);
-
-  if ($result->num_rows > 0) {  
-    // log them in as an admin and redirect to index and exit
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {  
+    // log them in as a customer and redirect to index and exit 
+    
+        $row = $result->fetch_assoc();
+      
+        if (password_verify($pwd, $row['password'])){
+            // log them in as a customer and redirect to index and exit    
+            
+            if ($row['rootAdmin'] === 1) {
+                $_SESSION['user_type'] = 1;
+            }
+            else {
+                $_SESSION['user_type'] = 2;
+            }
+            
+            header("location:index.php");
+            exit();
+        }
+        else {
+            $_SESSION['user_type'] = 0;
+            header("location:index.php");
+            exit(); 
+        }
   } 
-
 
 //------------------------------------------------------ 
 // If arrived here (did not exit from any of the above statements)
 // Then set an invalid login message and redirect to index
 
 // Don't forget to unset the login credentials
-
-  $conn->close();
-
+    
+    unset($_POST['username']);
+    unset($_POST['password']);
+    
+    $_SESSION['user_type'] = 0;
+    $_SESSION['error'] = 'Error: invalid username or password';
+    
+    header("location:index.php");
+    
+    $conn->close();
 ?>
 
 

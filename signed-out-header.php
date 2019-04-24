@@ -2,10 +2,11 @@
 <!-- Signed out header -->
 
 <!-- Abdullah M -->
-	<?php
-		//$ROOT_PATH = '/Applications/XAMPP/xamppfiles/htdocs/math-fellows-project';
-	?>
-	
+    <?php
+	//$ROOT_PATH = '/Applications/XAMPP/xamppfiles/htdocs/math-fellows-project';
+//        session_start();
+    ?>
+<html>	
   <head>
     <meta charset="utf-8">
     <title>Home</title>
@@ -32,9 +33,9 @@
     </div>
     
     <form class="sign_in_form" action="verify-login.php" method="post">
-      <input id="sif_input" type="text" name="username" placeholder="username">
+        <input id="sif_input" type="text" name="username" placeholder="username" required>
         
-      <input id="sif_input" type="password" name="password" placeholder="password">
+        <input id="sif_input" type="password" name="password" placeholder="password" required>
         
       <button class="sign_in_button" type="submit">Sign in</button>
     </form>        

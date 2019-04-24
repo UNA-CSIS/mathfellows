@@ -1,4 +1,9 @@
-<!-- Signed in tutor header -->
+<?php 
+
+  if ($_SESSION['user_type'] !== 3){
+    header('location:do-sign-out.php');
+  }
+?>
 
 <!-- Holleigh Landers -->
 

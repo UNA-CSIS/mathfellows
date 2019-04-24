@@ -3,8 +3,12 @@
   /*** Holleigh Landers ***/
  
   /*** Abdullah Alharbi - Added some stuff ***/
-
+  session_start();
   include('tutor-header.php');
+  
+  if ($_SESSION['user_type'] !== 3){
+    header('location:do-sign-out.php');
+  }
 ?>
   <body>
     <div class="container">

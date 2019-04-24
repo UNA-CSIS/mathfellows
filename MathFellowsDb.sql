@@ -11,7 +11,7 @@ CREATE TABLE customers (
   phone varchar(10),
   email varchar(50),
   username varchar(50) NOT NULL,
-  password varchar(50) NOT NULL,
+  password varchar(255) NOT NULL,
   date_created date
 );
 
@@ -23,7 +23,7 @@ CREATE TABLE tutors (
   phone int,
   email varchar(50),
   username varchar(50) NOT NULL,
-  password varchar(50) NOT NULL, 
+  password varchar(255) NOT NULL, 
   approved tinyint(1) NOT NULL,
   active tinyint(1) NOT NULL,
   date_created date
@@ -33,34 +33,34 @@ CREATE TABLE tutors (
 CREATE TABLE admins (
   id int primary key auto_increment NOT NULL,
   username varchar(50) NOT NULL,
-  password varchar(50) NOT NULL,
+  password varchar(255) NOT NULL,
   rootAdmin tinyint(1) NOT NULL
 );
 
 CREATE TABLE grades (
-	id int primary key auto_increment NOT NULL,
-	grade varchar(50)
+    id int primary key auto_increment NOT NULL,
+    grade varchar(50)
 );
 
 CREATE TABLE subjects (
-	id int primary key auto_increment NOT NULL,
-	subject varchar(50)
+    id int primary key auto_increment NOT NULL,
+    subject varchar(50)
 );
 
 CREATE TABLE tutorGradeBridge (
-	id int primary key auto_increment NOT NULL,
-	tutorId int,
-	gradeId int,
-	FOREIGN KEY (tutorId) REFERENCES tutors(id),
-	FOREIGN KEY (gradeId) REFERENCES grades(id)
+    id int primary key auto_increment NOT NULL,
+    tutorId int,
+    gradeId int,
+    FOREIGN KEY (tutorId) REFERENCES tutors(id),
+    FOREIGN KEY (gradeId) REFERENCES grades(id)
 );
 
 CREATE TABLE tutorSubjectBridge (
-	id int primary key auto_increment NOT NULL,
-	tutorId int,
-	subjectId int,
-	FOREIGN KEY (tutorId) REFERENCES tutors(id),
-	FOREIGN KEY (subjectId) REFERENCES subjects(id)
+    id int primary key auto_increment NOT NULL,
+    tutorId int,
+    subjectId int,
+    FOREIGN KEY (tutorId) REFERENCES tutors(id),
+    FOREIGN KEY (subjectId) REFERENCES subjects(id)
 );
 
 INSERT INTO customers (firstName, lastName, phone, email, username, password, date_created) VALUES ('John', 'Doe', '123456789', 'john@example.com', 'johnny22', '23kr2323', '2019-01-01');

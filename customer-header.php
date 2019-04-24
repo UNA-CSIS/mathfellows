@@ -28,7 +28,7 @@
           <li><a href="index.php">Home</a></li>
           <li><a href="see-a-tutor.php">See a tutor</a></li>
           <li><a href="customer-account.php">Account</a></li>
-          <li><a href="#">Sign out</a></li>
+          <li><a href="do-sign-out.php">Sign out</a></li>
         </ul>
       </div>
       

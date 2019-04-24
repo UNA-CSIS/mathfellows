@@ -1,9 +1,11 @@
-<!-- Abdullah M -->
-
-<!-- See a tutor -->
-
 <?php
-  include('customer-header.php');
+    /*** Abdullah M ***/
+    session_start();	
+    include('customer-header.php');
+    
+    if ($_SESSION['user_type'] !== 4){
+        header('location:do-sign-out.php');
+    }
 ?>
   <body>
     <div class="container">

@@ -1,3 +1,10 @@
+<?php 
+
+if ($_SESSION['user_type'] !== 4){
+    header('location:do-sign-out.php');
+}
+
+?>
 <!-- Signed in customer -->
 
 <!-- Abdullah M -->

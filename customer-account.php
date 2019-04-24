@@ -1,7 +1,12 @@
 <?php
-
-  include('customer-header.php');
+    session_start();
+    include('customer-header.php');
+    
+    if ($_SESSION['user_type'] !== 4){
+        header('location:do-sign-out.php');
+    }
 ?>
+
   <body>
     <div class="container">
       
@@ -18,6 +23,6 @@
         </div>
       </div>
       
-		  </div>
-	</body>
+    </div>
+  </body>
 </html>
