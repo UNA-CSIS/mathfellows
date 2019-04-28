@@ -1,20 +1,16 @@
-<?php 
-
-if ($_SESSION['user_type'] !== 4){
+<?php
+/*** Abdullah Alharbi ***/
+if ($_SESSION['user_type'] !== 4) {
     header('location:do-sign-out.php');
 }
-
 ?>
 <!-- Signed in customer -->
-
-<!-- Abdullah M -->
-
-  <body>
+<body>
     <div class="container">
-      
-      <div class="main_text">
-        Welcome 'username'..
-      </div>
+
+        <div class="main_text">
+            Welcome <?php echo $_SESSION['fn'] ?>..
+        </div>
     </div>
-  </body>
+</body>
 </html>

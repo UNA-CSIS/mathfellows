@@ -2,19 +2,17 @@
 /*** Abdullah M ***/
 session_start();
 
-if ($_SESSION['user_type'] == 2) {
-    include('admin-header.php');
-} else if ($_SESSION['user_type'] == 1) {
-    include ('root-admin-header.php');
-} else {
+if ($_SESSION['user_type'] !== 4) {
     header('location:do-sign-out.php');
 }
+include('customer-header.php');
 ?>
 <body>
     <div class="container">    
         <div class="main_text">
             Update password:
         </div>
+
         <div class="change_password">
             <form action="do-update-password.php" method="post">
                 <div> 
@@ -25,6 +23,7 @@ if ($_SESSION['user_type'] == 2) {
                     <label for="new_pwd_1">New password:</label>
                     <input type="password" name="new_pwd_1" placeholder="New password" required>
                 </div>
+
                 <div> 
                     <label for="new_pwd_2">Repeat new password:</label>
                     <input type="password" name="new_pwd_2" placeholder="Repeat new password" required>
@@ -34,6 +33,7 @@ if ($_SESSION['user_type'] == 2) {
                 </div>   
             </form>
         </div>
+
     </div>
 </body>
 </html>

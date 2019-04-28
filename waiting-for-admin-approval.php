@@ -1,5 +1,4 @@
 <?php
-	 
     /*** Abdullah Alharbi ***/
     session_start();	
     include('tutor-header.php');

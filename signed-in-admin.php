@@ -1,13 +1,9 @@
-<!-- Signed in admin header -->
-
 <!-- Abdullah M -->
-
-  <body>
+<body>
     <div class="container">
-      
-      <div class="main_text">
-        Welcome 'username'..
-      </div>
+        <div class="main_text">
+            Welcome <?php echo $_SESSION['un'] ?>..
+        </div>
     </div>
-  </body>
+</body>
 </html>
