@@ -1,2 +1,2 @@
 # UNA Math Fellows
-# CS 455
+# UNA Math Fellows
